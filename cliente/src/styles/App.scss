@@ -1,0 +1,130 @@
+body{
+    background-color: rgb(212, 211, 211);
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+    background-color: rgb(168, 25, 97);
+    figure {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+        .adaImg {
+            width: 100%;
+        }
+    }
+    input {
+        width: 70%;
+        border-radius: 1px;
+        border: 0px;
+    }
+    div {
+        width: 20px;
+        height: 18px;
+        border-radius: 1px;
+        background-color: gainsboro;
+        .searchmg {
+            width: 80%; 
+        }
+    }
+}
+
+.searchedProducts {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.productContainer{
+    width: 75%;
+    height: 120px;
+    background-color: white;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    .productImg {
+        width: 15%;
+        margin: 2px;
+    }
+    .priceContainer{
+        display: flex;
+        flex-direction: column; 
+        width: 65%;
+        span{
+            margin: 1px;
+        }
+        .shippingImg{
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .location{
+        width: 20%;
+    }
+}
+
+.breadcrumbContainer{
+    margin: 5px;
+    font-size: 10px;
+    .breadcrumb .last{
+        font-weight: bold;
+    }
+}
+
+.productDetailContainer{
+    width: 85%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    margin-left: 8%;
+    .pictureAndDescriptionContainer{
+        display: flex;
+        flex-direction: column;   
+        .pictureContainer{
+            width: 70%;
+            margin: 5px;
+        }     
+        .img{
+            width: 100%;
+        }
+        b{
+            font-size: 15px;
+            margin-left: 15px;
+        }
+        .description{
+            color: grey;
+            font-size: 10px;
+            margin-left: 15px;
+        }                    
+    }
+    .infoContainer{
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+        margin: 10px;
+        .price{
+            font-size: 20px;
+        }
+        button{
+            background-color: blue;
+            border: 0px;
+            color: white;
+            width: 180px;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 10px;
+        }
+    }
+}

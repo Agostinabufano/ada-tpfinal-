@@ -15,7 +15,6 @@ class Products extends Component {
 
   componentDidMount() {
     var self = this;
-    console.log("ComponentDidMount");
     axios.get(`http://localhost:3000/items?search=${this.searchParams()}`)
       .then(function (result) {
         self.setState({
@@ -26,9 +25,7 @@ class Products extends Component {
   }
 
   componentDidUpdate() {
-    var self = this;
-    console.log(this.searchParams());
-    
+    var self = this;   
     if (this.state.keyword != this.searchParams()){
      axios.get(`http://localhost:3000/items?search=${this.searchParams()}`)
       .then(function (result) {
@@ -42,10 +39,8 @@ class Products extends Component {
 
   searchParams() {
     var search = window.location.search;
-    // "?id=7125"
     search = search.slice(1, search.length);
     search = search.split("=");
-    // "[id,7125]"
     return search[1];
   }
 

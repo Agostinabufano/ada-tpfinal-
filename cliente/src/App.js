@@ -3,6 +3,7 @@ import Products from "./Products";
 import { BrowserRouter, Route } from 'react-router-dom';
 import Detail from "./Detail";
 import Header from "./Header";
+import './styles/App.css'
 
 
 class App extends Component {

@@ -10,7 +10,7 @@ class Header extends Component {
             placeholder: "Nunca dejes de buscar",
             inputVal: "",
         }
-        this.inputChange=this.inputChange.bind(this)
+        this.inputChange = this.inputChange.bind(this)
     }
 
     inputChange(e) {
@@ -23,13 +23,15 @@ class Header extends Component {
         return (
             <header>
                 <figure>
-                    <img src={logo}></img>
+                    <img className="adaImg" src={logo}></img>
                 </figure>
-                <input placeholder={this.state.placeholder} value={this.state.inputVal} onChange={(e) => this.inputChange(e)}></input>
-                <img src={searchImg}  onClick={(e)=>this.props.history.push('/items?search='+this.state.inputVal)}/>
+                <input className="searchInput" placeholder={this.state.placeholder} value={this.state.inputVal} onChange={(e) => this.inputChange(e)}></input>
+                <div>
+                    <img className="searchImg" src={searchImg} onClick={(e) => this.props.history.push('/items?search=' + this.state.inputVal)} />
+                </div>
             </header>
         );
     }
 }
 
-export default withRouter (Header)
+export default withRouter(Header)

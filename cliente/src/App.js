@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
+        <BrowserRouter basename="/mercadolibre">
           <div>
             <Header></Header>
             <Route path="/items" exact strict component={Products} />

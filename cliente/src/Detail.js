@@ -15,7 +15,8 @@ class Detail extends Component {
 
   componentDidMount() {
     var self = this;
-    axios.get(`http://localhost:3000/items/${this.state.id}`)
+    // axios.get(`http://localhost:3000/mercadoapi/items/${this.state.id}`)
+    axios.get(`/mercadoapi/items/${this.state.id}`)
       .then(function (result) {
         console.log(result.data);
 

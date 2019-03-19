@@ -15,7 +15,8 @@ class Products extends Component {
 
   componentDidMount() {
     var self = this;
-    axios.get(`http://localhost:3000/items?search=${this.searchParams()}`)
+    // axios.get(`http://localhost:3000/mercadoapi/items/${this.state.id}`)
+    axios.get(`/mercadoapi/items?search=${this.searchParams()}`)
       .then(function (result) {
         self.setState({
           products: result.data.items,
@@ -25,16 +26,17 @@ class Products extends Component {
   }
 
   componentDidUpdate() {
-    var self = this;   
-    if (this.state.keyword != this.searchParams()){
-     axios.get(`http://localhost:3000/items?search=${this.searchParams()}`)
-      .then(function (result) {
-        self.setState({
-          products: result.data.items,
-          keyword: self.searchParams()
+    var self = this;
+    if (this.state.keyword != this.searchParams()) {
+      // axios.get(`http://localhost:3000/mercadoapi/items/${this.state.id}`)
+      axios.get(`/mercadoapi/items?search=${this.searchParams()}`)
+        .then(function (result) {
+          self.setState({
+            products: result.data.items,
+            keyword: self.searchParams()
+          })
         })
-      })
-    } 
+    }
   }
 
   searchParams() {

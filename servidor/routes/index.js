@@ -5,7 +5,7 @@ var cors = require('cors');
 
 router.use(cors());
 
-router.get('/items', function (req, res) {
+router.get('/mercadoapi/items', function (req, res) {
   const search = req.query.search;
   axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=` + search + "&limit=4")
     .then(function (result) {
@@ -39,7 +39,7 @@ router.get('/items', function (req, res) {
     })
 });
 
-router.get('/items/:id', function (req, res) {
+router.get('/mercadoapi/items/:id', function (req, res) {
   const id = req.params.id;
   axios.get(`https://api.mercadolibre.com/items/${id}`)
     .then(function (params) {
@@ -70,8 +70,6 @@ router.get('/items/:id', function (req, res) {
               product.breadcrumb = catArr;
               axios.get(`https://api.mercadolibre.com/currencies/ARS`)
                 .then(function (data) {
-                  console.log(data);
-
                   var moneySymbol = data.data.symbol;
                   product.price.currency = moneySymbol;
                   res.send(product)

@@ -10,30 +10,33 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 28px;
+  height: 40px;
   background-color: #a81961;
 }
 header figure {
   width: 20px;
   height: 20px;
-  margin-right: 2px;
+  margin: 10px;
 }
 header figure .adaImg {
   width: 100%;
 }
-header input {
-  width: 70%;
-  border-radius: 1px;
-  border: 0px;
-}
 header div {
-  width: 20px;
-  height: 18px;
-  border-radius: 1px;
-  background-color: gainsboro;
+  width: 70%;
+  height: 20px;
 }
-header div .searchmg {
-  width: 80%;
+header div .searchImg {
+  position: relative;
+  top: -20px;
+  left: calc(100% - 20px);
+  font-size: 15px;
+  cursor: pointer;
+}
+header div input {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 0px;
 }
 
 .searchedProducts {
@@ -87,7 +90,11 @@ header div .searchmg {
   height: auto;
   background-color: white;
   display: flex;
-  margin-left: 8%;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 10px 10px 10px darkgrey;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .productDetailContainer .pictureAndDescriptionContainer {
   display: flex;

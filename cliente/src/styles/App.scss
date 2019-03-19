@@ -1,37 +1,40 @@
-body{
+body {
     background-color: rgb(212, 211, 211);
     font-family: 'Poppins', sans-serif;
     margin: 0%;
 }
 
 header {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 28px;
+    height: 40px;
     background-color: rgb(168, 25, 97);
     figure {
         width: 20px;
         height: 20px;
-        margin-right: 2px;
+        margin: 10px;
         .adaImg {
             width: 100%;
         }
     }
-    input {
-        width: 70%;
-        border-radius: 1px;
-        border: 0px;
-    }
     div {
-        width: 20px;
-        height: 18px;
-        border-radius: 1px;
-        background-color: gainsboro;
-        .searchmg {
-            width: 80%; 
+        width: 70%;
+        height: 20px;
+        .searchImg {
+            position: relative;
+            top: -20px;
+            left: calc(100% - 20px);
+            font-size: 15px;
+            cursor: pointer;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            border: 0px;
         }
     }
 }
@@ -44,7 +47,7 @@ header {
     justify-content: center;
 }
 
-.productContainer{
+.productContainer {
     width: 75%;
     height: 120px;
     background-color: white;
@@ -57,66 +60,70 @@ header {
         width: 15%;
         margin: 2px;
     }
-    .priceContainer{
+    .priceContainer {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         width: 65%;
-        span{
+        span {
             margin: 1px;
         }
-        .shippingImg{
+        .shippingImg {
             width: 10px;
             height: 10px;
         }
     }
-    .location{
+    .location {
         width: 20%;
     }
 }
 
-.breadcrumbContainer{
+.breadcrumbContainer {
     margin: 5px;
     font-size: 10px;
-    .breadcrumb .last{
+    .breadcrumb .last {
         font-weight: bold;
     }
 }
 
-.productDetailContainer{
+.productDetailContainer {
     width: 85%;
     height: auto;
     background-color: white;
     display: flex;
-    margin-left: 8%;
-    .pictureAndDescriptionContainer{
+    margin: auto;
+    padding: 15px;
+    box-shadow: 10px 10px 10px darkgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .pictureAndDescriptionContainer {
         display: flex;
-        flex-direction: column;   
-        .pictureContainer{
+        flex-direction: column;
+        .pictureContainer {
             width: 70%;
             margin: 5px;
-        }     
-        .img{
+        }
+        .img {
             width: 100%;
         }
-        b{
+        b {
             font-size: 15px;
             margin-left: 15px;
         }
-        .description{
+        .description {
             color: grey;
             font-size: 10px;
             margin-left: 15px;
-        }                    
+        }
     }
-    .infoContainer{
+    .infoContainer {
         display: flex;
         flex-direction: column;
         font-size: 10px;
         margin: 10px;
-        .price{
+        .price {
             font-size: 20px;
         }
-        button{
+        button {
             background-color: blue;
             border: 0px;
             color: white;

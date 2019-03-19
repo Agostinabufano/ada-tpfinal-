@@ -25,8 +25,8 @@ class Header extends Component {
                 <figure>
                     <img className="adaImg" src={logo}></img>
                 </figure>
-                <input className="searchInput" placeholder={this.state.placeholder} value={this.state.inputVal} onChange={(e) => this.inputChange(e)}></input>
                 <div>
+                    <input className="searchInput" placeholder={this.state.placeholder} value={this.state.inputVal} onChange={(e) => this.inputChange(e)}></input>
                     <img className="searchImg" src={searchImg} onClick={(e) => this.props.history.push('/items?search=' + this.state.inputVal)} />
                 </div>
             </header>

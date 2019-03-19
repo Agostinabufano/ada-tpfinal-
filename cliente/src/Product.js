@@ -25,9 +25,9 @@ class Product extends Component {
                     <Link to={'/items/' + this.props.product.id}><img src={this.props.product.picture}></img></Link>
                 </div>
                 <div className="priceContainer">
+                    <span>{this.props.product.title}</span>
                     <span>{this.props.product.price.currency}   {this.formatAmount(this.props.product.price.amount)}{this.formatDecimals(this.props.product.price.decimals)}</span>
                     <span>{this.props.product.free_shipping}</span>{this.props.product.free_shipping === true && <img className="shippingImg" src={free_shipping}></img>}
-                    <span>{this.props.product.title}</span>
                 </div>
                 <div className="location">
                     <span>{this.props.product.location}</span>

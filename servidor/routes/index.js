@@ -2,8 +2,16 @@ var express = require('express');
 var router = express.Router();
 var axios = require('axios');
 var cors = require('cors');
+var path = require('path');
 
 router.use(cors());
+
+router.use(express.static(path.join(__dirname + "/../../cliente/build")));
+
+router.get("/", function (req, res) {
+  console.log("asd");
+  res.sendFile(path.join(__dirname + "/../../cliente/build/index.html"));
+});
 
 router.get('/mercadoapi/items', function (req, res) {
   const search = req.query.search;
